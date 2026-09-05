@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ValidationLogin.MainPage">
+    <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand">
+        <Frame BackgroundColor="#333333"
+               BorderColor="White">
+            <StackLayout>
+                <Label Text="Email:"
+                       HorizontalTextAlignment="Start"/>
+                <Entry x:Name="txtEmail"
+                       WidthRequest="200"
+                       ClearButtonVisibility="WhileEditing"/>
+                <Label x:Name="lblEmailValidation"
+                       Text="* Informe o email."
+                       TextColor="#f33436"
+                       FontSize="12"
+                       IsVisible="False"/>
+
+                <Label Text="Senha:"
+                       HorizontalTextAlignment="Start"/>
+                <Entry x:Name="txtSenha"
+                       WidthRequest="200"
+                       ClearButtonVisibility="WhileEditing"/>
+                <Label x:Name="lblSenhaValidation"
+                       Text="* Informe a senha."
+                       TextColor="#f33436"
+                       FontSize="12"
+                       IsVisible="False"/>
+
+                <Button Text="Entrar"
+                        BackgroundColor="DeepSkyBlue"
+                        Clicked="btnEntrar_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
