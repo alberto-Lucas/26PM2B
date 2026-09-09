@@ -50,11 +50,12 @@
 
             if (senha.IsEmpty())
                 senha.SetInformation("Informa a senha.", true);
-            else if (senha.GetText() != "admin")
-                senha.SetInformation("Senha incorreta.", true);
             else if (!senha.IsSizeFull(5))
                 senha.SetInformation("Informe a senha com no " +
                                      "mínimo 5 caracteres.", true);
+            else if (senha.GetText() != "admin")
+                senha.SetInformation("Senha incorreta.", true);
+            
             else
             {
                 resultado = true;
