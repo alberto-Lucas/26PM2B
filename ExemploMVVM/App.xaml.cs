@@ -5,11 +5,8 @@
         public App()
         {
             InitializeComponent();
-        }
-
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
+            //Chamada da tela desejada
+            MainPage = new NavigationPage(new Views.pgPessoa());
         }
     }
 }
