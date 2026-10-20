@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoMVVM.Views.CarroListaView"
+             Title="CarroListaView">
+    <StackLayout Padding="10">
+        <!--Botoes Acesso-->
+        <StackLayout>
+            <Button Text="Cadastrar"
+                    Command="{Binding AbrirCadastroCommand}"
+                    FontSize="20"
+                    Margin="0, 10, 0, 0"/>
+
+            <Button Text="Atualizar"
+                    Command="{Binding AtualizarCommand}"
+                    FontSize="20"
+                    Margin="0, 10, 0, 0"/>
+
+            <Button Text="Visualizar"
+                    Command="{Binding VisualizarCommand}"
+                    FontSize="20"
+                    Margin="0, 10, 0, 0"/>
+
+            <Button Text="Excluir"
+                    Command="{Binding DeletarCommand}"
+                    FontSize="20"
+                    Margin="0, 10, 0, 0"/>
+        </StackLayout>
+        <!--Listagem-->
+        <!--ItemsSource: registros q seram exibidos (Carros da ViewModel)
+            SelectedItem: item clicado na lista (CarroSelecionado da ViewModel)-->
+        <ListView ItemsSource="{Binding Carros}"
+                  SelectedItem="{Binding CarroSelecionado}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <!--Definir a aparencia dos registros-->
+                        <Frame CornerRadius="10"
+                               Padding="10"
+                               Margin="5"
+                               BackgroundColor="#414142">
+                            <!--Stack do dados-->
+                            <StackLayout>
+                                <Label Text="{Binding Id}"/>
+                                <Label Text="{Binding Modelo}"
+                                       FontSize="20"
+                                       FontAttributes="Bold"/>
+                                <!--Stack para a Marca-->
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Marca: "/>
+                                    <Label Text="{Binding Marca}"
+                                           Margin="5, 0"/>
+                                </StackLayout>
+                                <!--Stack para a Cor-->
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Cor: "/>
+                                    <Label Text="{Binding Cor}"
+                                           Margin="5, 0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoMVVM.Views.CarroCadastroView"
+             Title="CarroCadastroView">
+    <ScrollView>
+        <StackLayout Padding="15">
+            <Button Text="Voltar"
+                    Command="{Binding VoltarCommand}"/>
+
+            <StackLayout Padding="10"/>
+            <Label Text="Cadastrar"
+               FontSize="30"
+               HorizontalTextAlignment="Center"/>
+
+            <StackLayout Padding="10"/>
+            <Label Text="Marca:"/>
+            <Entry Text="{Binding Marca}"/>
+
+            <StackLayout Padding="10"/>
+            <Label Text="Modelo:"/>
+            <Entry Text="{Binding Modelo}"/>
+
+            <StackLayout Padding="10"/>
+            <Label Text="Cor:"/>
+            <Entry Text="{Binding Cor}"/>
+
+            <StackLayout Padding="10"/>
+            <Button Text="Cadastrar"
+                Command="{Binding CadastrarCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

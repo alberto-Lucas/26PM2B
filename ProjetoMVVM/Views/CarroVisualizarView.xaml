@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoMVVM.Views.CarroVisualizarView"
+             Title="CarroVisualizarView">
+    <ScrollView>
+        <StackLayout Padding="15">
+            <Button Text="Voltar"
+                    Command="{Binding VoltarCommand}"/>
+
+            <StackLayout Padding="10"/>
+            <Label Text="Visualizar"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"/>
+
+            <StackLayout Padding="10"/>
+            <Label Text="Id:"/>
+            <Label Text="{Binding Id}"/>
+
+            <StackLayout Padding="10"/>
+            <Label Text="Marca:"/>
+            <Label Text="{Binding Marca}"/>
+
+            <StackLayout Padding="10"/>
+            <Label Text="Modelo:"/>
+            <Label Text="{Binding Modelo}"/>
+
+            <StackLayout Padding="10"/>
+            <Label Text="Cor:"/>
+            <Label Text="{Binding Cor}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
